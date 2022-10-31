@@ -28,6 +28,8 @@ https://pub.dev/packages/melos
 ## Runtime
 https://pub.dev/packages/flutter_adaptive_scaffold
 https://pub.dev/packages/flutter_native_splash
+https://pub.dev/packages/shared_preferences
+https://pub.dev/packages/hooks_riverpod
 
 ## Development
 https://pub.dev/packages/flutter_launcher_icons

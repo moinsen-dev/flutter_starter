@@ -6,7 +6,14 @@ bricks=(core)
 for brick in "${bricks[@]}"
 do
     echo "bundling $brick..."
-    mason bundle -s git "https://github.com/moinsen-dev/flutter_starter/bricks/$brick" --git-path brick -t dart -o "lib/src/commands/create/templates/$brick"
+    mason bundle "bricks/$brick" --git-path brick -t dart -o "lib/src/commands/create/templates/$brick"
+done
+
+bricks=(very_good_core very_good_dart_package very_good_dart_cli very_good_flutter_package very_good_flutter_plugin)
+for brick in "${bricks[@]}"
+do
+    echo "bundling $brick..."
+    mason bundle -s git "https://github.com/verygoodopensource/$brick" --git-path brick -t dart -o "lib/src/commands/create/templates/$brick"
 done
 
 dart format .
